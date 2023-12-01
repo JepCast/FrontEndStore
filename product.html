@@ -29,7 +29,28 @@
     </nav>
 
     <main class="container">
-        <h1>Product</h1>
+        <h1>Vue JS</h1>
+
+        <div class="shirt">
+            <img src="img/1.jpg" alt="Shirt image" class="shirt__img">
+            
+            <div class="shirt__content">
+                <p class="shirt__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                
+                <!-- Crea un formulario para la selección multiple de tallas -->
+                <form class="form"> 
+                    <select class="field__form">
+                        <option disabled selected>-- Select Size --</option> <!--Hace que el elemento no se pueda seleccionar y además que sea el elemento principal que aparezca al querer seleccionar una talla -->
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                    </select>
+                    <input type="number" placeholder="Quantity" class="field__form" min="1">
+                    <!-- El min hace que no se pueda seleccionar un número menor a 1 -->
+                    <input type="submit" value="Add to Cart" class="submit__form">
+                </form>
+            </div>
+        </div>
     </main>
 
   <footer class="footer">

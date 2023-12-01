@@ -34,7 +34,7 @@ a{
     text-decoration: none;
 }
 img{
-    max-width: 100%;
+    width: 100%;
 }
 .container{
     max-width: 120rem;
@@ -163,7 +163,9 @@ h3{
     grid-template-rows: repeat(2, auto); /*Crea 2 filas de igual tamaño*/
     /*Al colocar el "auto" el tamaño se  determina automaticamente dependiendo de los px*/
 }
-/*About Us*/
+
+
+/*Page About Us*/
 @media (min-width: 768px){
     .us{
         grid-template-columns: repeat(2, 1fr);
@@ -172,7 +174,6 @@ h3{
 }
 .us__image{
     grid-row: 1/2; /*Posiciona los elementos en una fila de nuestro grid*/
-    width: 100%;
 
 }
 @media (min-width: 768px){
@@ -194,13 +195,50 @@ h3{
     } 
      
 }
-
 .block{
     text-align: center;
 }
-.block__image{
-    width: 100%;
-}
 .block__title{
     margin: 0;
+}
+
+
+/*Page Product*/
+@media (min-width: 768px){
+    .shirt{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }    
+}
+.form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+.field__form{
+    border: 1rem solid var(--primarioOscuro);
+    /*Esto hace que el form tenga un borde, el cual su tamaño
+     sea de 1rem, que sea solido y por ultimo que el color sea el var(--primarioOscuro*/
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    
+    
+}
+.submit__form{
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--mainfont);
+    padding: 2rem;
+    transition: bakground-color .3s ease; /*Hace que al hacer el cambio de color 
+    con el hover, vea una transición, del background-color de 0.3 segundos.*/
+    grid-column: 1/3;
+}
+.submit__form:hover{
+    background-color: var(--secundarioOscuro);
+    cursor: pointer;
 }
